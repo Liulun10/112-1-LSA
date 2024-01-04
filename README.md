@@ -17,7 +17,8 @@ smtplib
 | 8顆?V電池+電池盒子      | 是整齊的      |    $1 |
 | | L298N 步進馬達驅動模組      | 是整齊的      |    $1 |      | 是整齊的      |    $1 |
 | MCP3008類比訊號轉換器      | ![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/d1dd9456-b3b6-4554-9d6f-684c9157edb7)
-      |    $1 |
+      |    $1 |![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/64dd300d-24ed-425b-b499-8fa522ec25d9)
+
 | 心律傳感器     | 是整齊的      |    $1 |
 | 喇叭(有3.5mm輸出的      |       |    $0(柏瑋學長提供 |
 
