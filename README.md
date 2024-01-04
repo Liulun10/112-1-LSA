@@ -48,6 +48,12 @@ GIPO
 李浩源：查資料
 ## 善用所學 (Knowledge from Lecture)
 ## 參考資料 (References)
-https://104.es/index.php/2021/08/27/raspi-adc-mcp3008/
-https://randomnerdtutorials.com/raspberry-pi-analog-inputs-python-mcp3008/
-https://github.com/WorldFamousElectronics/Raspberry_Pi/blob/master/PulseSensor_Processing_Pi/PulseSensor_Processing_Pi.md
+https://104.es/index.php/2021/08/27/raspi-adc-mcp3008/  
+https://randomnerdtutorials.com/raspberry-pi-analog-inputs-python-mcp3008/  
+https://github.com/WorldFamousElectronics/Raspberry_Pi/blob/master/PulseSensor_Processing_Pi/PulseSensor_Processing_Pi.md  
+https://s761111.gitbook.io/raspi-sensor/yi-de-xin-tiao-mo-ling-jian  
+https://s761111.gitbook.io/raspi-sensor/pai-bi-wei-li  
+https://github.com/jumejume1/pi-l298n-dc-motor  
+https://www.gushiciku.cn/pl/pDLC/zh-tw  
+https://www.youtube.com/watch?v=BpE6zDN21qs&t=164s  
+https://pulsesensor.com/pages/pulsesensor-raspberrypi  
