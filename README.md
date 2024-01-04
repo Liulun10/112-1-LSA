@@ -23,8 +23,13 @@ smtplib
 
 
 ## 前置下載 (Installation)
-Sodo apt install python3
-Pip3 
+使用到的軟體與套件
+python3
+smtplib
+pygame
+time
+GIPO
+
 ## 執行過程 (Implementation Process)
 
 ## 開始玩囉！ (Usage)
@@ -33,12 +38,14 @@ Pip3
 
 ## 心得反饋&遇到的困難
 樹梅派很皮，明明一樣的設定，但有時候就是跑不出東西，所以遇到問題，給它一點時間，多做幾次(放一包綠色乖乖在旁邊
+緊急發現樹莓派無法輸入類比訊號，趕快到台中採買
 
 ## 工作分配 (Job Assignment)
 劉宜倫：github整理，製作PPT，零件採買  
 陳梓銜：題目發想，程式撰寫，硬體組裝，零件採買  
 蔡宇哲：程式撰寫，硬體組裝  
 藍奕勛：程式撰寫，硬體組裝  
+李浩源：查資料
 ## 善用所學 (Knowledge from Lecture)
 ## 參考資料 (References)
 https://104.es/index.php/2021/08/27/raspi-adc-mcp3008/
