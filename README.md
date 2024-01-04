@@ -18,7 +18,7 @@ smtplib
 | L298N 步進馬達驅動模組      |       |    $80 自行購買 台中今華電子 |  
 | MCP3008類比訊號轉換器      | ![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/d1dd9456-b3b6-4554-9d6f-684c9157edb7)|  $250 自行購買 台中今華電子 |
 | 心律傳感器     | ![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/9dd2f3fb-c838-4692-908d-b5167e77bb93)    |    $120 自行購買(買的沒有焊接好，後來在moli找到焊接好的) 台中今華電子 |
-| 喇叭(有3.5mm輸出的      |       |    $0(柏瑋學長提供 |
+| 喇叭(有3.5mm輸出的      | ![image]( https://github.com/Liulun10/112-1-LSA/blob/main/507447.jpg )    |    $0(柏瑋學長提供 |
 | 杜邦線 | | $0 moli提供 | 
 
 
