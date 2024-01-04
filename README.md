@@ -15,14 +15,11 @@ smtplib
 | Raspberry Pi 4        | 靠右對齊      | $1600 |
 | RF-15 強扭力直流馬達        | 置中對齊      |   $12 |
 | 8顆?V電池+電池盒子      | 是整齊的      |    $1 |
-| | L298N 步進馬達驅動模組      | 是整齊的      |    $1 |      | 是整齊的      |    $1 |
-| MCP3008類比訊號轉換器      | ![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/d1dd9456-b3b6-4554-9d6f-684c9157edb7)
-      |    $1 |![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/64dd300d-24ed-425b-b499-8fa522ec25d9)
-
-| 心律傳感器     | 是整齊的      |    $1 |
+| L298N 步進馬達驅動模組      | 是整齊的      |    $250 自行購買 台中今華電子 |  
+| MCP3008類比訊號轉換器      | ![image](https://github.com/Liulun10/112-1-LSA/assets/148021967/d1dd9456-b3b6-4554-9d6f-684c9157edb7)|  $250 自行購買 台中今華電子 |
+| 心律傳感器     | 是整齊的      |    $120 自行購買(買的沒有焊接好，後來在moli找到焊接好的) 台中今華電子 |
 | 喇叭(有3.5mm輸出的      |       |    $0(柏瑋學長提供 |
-
-
+| 杜邦線 |<img src="[https://example.com/image.jpg](https://github.com/Liulun10/112-1-LSA/assets/148021967/d1dd9456-b3b6-4554-9d6f-684c9157edb7)" alt="Image" width="400" height="300"> |moli提供 | 
 
 
 ## 前置下載 (Installation)
