@@ -3,16 +3,15 @@
 ## 動機發想 (Concept Development)
 最近天氣越來越冷，每天都好難起床，但已經翹太多課的小源，必須得起床去上課，為了幫助他，我們用樹莓派做了一個互動式鬧鐘，讓他一定能起床上課!!!
 ## 說明
-使用者先設定起床時間，以及不可告人的秘密和要發送的電子郵件，時間到後喇叭會先撥出音樂，5分鐘後則開始轉動馬達攻擊使用，10分鐘後則傳送秘密給別人，若要暫停鬧鐘，心跳須達到95次/分鐘
+使用者先設定起床時間及幾秒內要起床，時間到後喇叭會先撥出音樂，過了起床時間的一半則開始轉動馬達攻擊，超過起床時間後則傳送秘密，若要暫停鬧鐘，心跳須達到95次/分鐘  
+例如：設定9:00的鬧鐘，10分鐘內要起床，那麼9:00就會先開始撥放音樂，9:05馬達開始轉動，9:10發送郵件
 ## 軟體架構 (Existing Library/Software)
-Python3
-Pygame
-Time
-smtplib
+Python3  
+
 ## 硬體
 | 設備名稱     | 圖片           | 來源  |
 | ---- |:---:| ---:|
-| Raspberry Pi 4        |       | $0 |
+| Raspberry Pi 4        |  ![image]([https://github.com/Liulun10/112-1-LSA/blob/main/507409.jpg](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/raspberrypi.jpg))      | $0 |
 | RF-15 強扭力直流馬達        | ![image](https://github.com/Liulun10/112-1-LSA/blob/main/507409.jpg)      |   $120 自行購買 台中今華電子 |
 | 8顆1.5V電池+電池盒子      |       |    $10幾塊? 自行購買 台中今華電子 |
 | L298N 步進馬達驅動模組      |       |    $80 自行購買 台中今華電子 |  
@@ -28,13 +27,19 @@ python3
 smtplib
 pygame
 time
-GIPO
+GIPO  
+threading  
+datetime  
+timedelta  
+subprocess  
+Pulsesensor  
+sys
 
 ## 執行過程 (Implementation Process)
 
 ## 開始玩囉！ (Usage)
-先設定起床時間
-再設定不可告人秘密及要傳送對象的電子郵件
+購買以上設備，並組裝完成  
+Clone the project on GitHub：`https://github.com/Liulun10/112-1-LSA-ALARAGE.git`
 
 ## 心得反饋&遇到的困難
 樹梅派很皮，明明一樣的設定，但有時候就是跑不出東西，所以遇到問題，給它一點時間，多做幾次(放一包綠色乖乖在旁邊
@@ -48,6 +53,7 @@ GIPO
 李浩源：查資料
 ## 善用所學 (Knowledge from Lecture)
 ## 參考資料 (References)
+https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3  
 https://104.es/index.php/2021/08/27/raspi-adc-mcp3008/  
 https://randomnerdtutorials.com/raspberry-pi-analog-inputs-python-mcp3008/  
 https://github.com/WorldFamousElectronics/Raspberry_Pi/blob/master/PulseSensor_Processing_Pi/PulseSensor_Processing_Pi.md  
