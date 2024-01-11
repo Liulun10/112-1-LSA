@@ -246,7 +246,7 @@ smtp.quit()
 藍奕勛：程式撰寫，硬體組裝，採買零件，討論，報告  
 李浩源：查資料，出席報告
 ## 善用所學 (Knowledge from Lecture)
-ssh，基礎指令，pythont程式
+ssh，基礎指令，python程式
 ## 參考資料 (References)
 https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3  
 https://tutorials-raspberrypi.com/wp-content/uploads/Raspberry-Pi-MCP3008-ADC-Anschluss-Steckplatine.png  
