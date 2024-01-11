@@ -259,3 +259,4 @@ https://github.com/jumejume1/pi-l298n-dc-motor
 https://www.gushiciku.cn/pl/pDLC/zh-tw  
 https://www.youtube.com/watch?v=BpE6zDN21qs&t=164s  
 https://pulsesensor.com/pages/pulsesensor-raspberrypi  
+https://note.drx.tw/2008/03/ubuntuscp-part1.html  
