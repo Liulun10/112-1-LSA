@@ -22,18 +22,18 @@ Python3
 
 
 ## 前置下載 (Installation)
-使用到的軟體與套件
-python3
-smtplib
-pygame
-time
-GIPO  
-threading  
-datetime  
-timedelta  
-subprocess  
-Pulsesensor  
-sys
+#### 使用到的軟體與套件  
+*python3  
+* smtplib  
+* pygame
+* time
+* GIPO  
+* threading  
+* datetime  
+* timedelta  
+* subprocess  
+* Pulsesensor  
+* sys
 
 ## 執行過程 (Implementation Process)
 ### 組裝硬體設備
@@ -240,11 +240,11 @@ smtp.quit()
 * 偵測心跳需要搭配MCP3008把類比訊號轉為數位訊號，參考[搜尋到的資料](https://github.com/tutRPi/Raspberry-Pi-Heartbeat-Pulse-Sensor/tree/master)
   使用到這位的`MCP3008.py`及`pulsesensor.py`檔案，請搭配使用
 ## 工作分配 (Job Assignment)
-劉宜倫：github整理，製作PPT，零件採買，討論  
-陳梓銜：題目發想，程式撰寫，排錯，硬體組裝，零件採買，討論  
-蔡宇哲：提供意見，硬體組裝，零件採買，討論  
-藍奕勛：程式撰寫，硬體組裝，零件採買，討論  
-李浩源：查資料
+劉宜倫：github整理，製作PPT，零件採買，討論，報告  
+陳梓銜：題目發想，程式撰寫，排錯，硬體組裝，零件採買，討論，報告  
+蔡宇哲：提供意見，硬體組裝，零件採買，討論，報告  
+藍奕勛：程式撰寫，硬體組裝，零件採買，討論，報告  
+李浩源：查資料，出席報告
 ## 善用所學 (Knowledge from Lecture)
 ssh，基礎指令，pythont程式
 ## 參考資料 (References)
