@@ -18,7 +18,7 @@ Python3
 | MCP3008類比訊號轉換器      | ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/mcp3008.jpg)|  $250 自行購買 台中今華電子 |
 | 心律傳感器     | ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/%E5%BF%83%E8%B7%B3%E6%84%9F%E6%B8%AC%E5%99%A8.jpg)  |  $120 自行購買(買的沒有焊接好，後來在moli找到焊接好的) 台中今華電子 |
 | 喇叭(有3.5mm輸出的)      | ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/%E5%96%87%E5%8F%AD.jpg)    |    $0(柏瑋學長提供 |
-| 杜邦線(數條) | | $0 moli提供 | 
+| 杜邦線(數條)&麵包板 | | $0 moli提供 | 
 
 
 ## 前置下載 (Installation)
