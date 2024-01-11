@@ -27,18 +27,18 @@ Python3
 * smtplib  
 * pygame
 * time
-* GIPO  
-* threading  
+* RPi.GPIO   
+* threading
+* spidev  
 * datetime  
-* timedelta  
-* subprocess  
-* Pulsesensor  
+* subprocess   
 * sys
 
 ## 執行過程 (Implementation Process)
 ### 組裝硬體設備
   * #### MCP3008參考此圖接線  
   ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/MCP3008%E6%8E%A5%E7%B7%9A%E5%9C%96.jpg)  
+  ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/mcp3008.png)
   * #### L298N參考此圖接線  
   ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/L298N%E6%8E%A5%E7%B7%9A%E5%9C%96.jpg)
   * #### 我們整個設備的接線狀態  
@@ -235,7 +235,7 @@ smtp.quit()
 * 緊急發現樹莓派無法輸入類比訊號，趕快到台中採買  
 * 剛開始要安裝套件時一直跑出錯誤訊息`error: externally-managed-environment`無法解決，後來看到這個[救命網頁](https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3)  
 輸入裡面的`sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED` 才解決問題
-* 裝馬達過程中發現，需要啟用SPI接口，(搜尋`樹莓派啟用SPI`)
+* 裝馬達過程中發現，需要啟用SPI，(搜尋`樹莓派啟用SPI`)
 * 鬧鐘響需要mp3等檔案，使用`scp FileName user@ip:/home/path/`，把檔案從本機複製到樹莓派
 * 偵測心跳需要搭配MCP3008把類比訊號轉為數位訊號，參考[搜尋到的資料](https://github.com/tutRPi/Raspberry-Pi-Heartbeat-Pulse-Sensor/tree/master)
   使用到這位的`MCP3008.py`及`pulsesensor.py`檔案，請搭配使用
