@@ -23,7 +23,7 @@ Python3
 
 ## 前置下載 (Installation)
 #### 使用到的軟體與套件  
-*python3  
+* python3  
 * smtplib  
 * pygame
 * time
