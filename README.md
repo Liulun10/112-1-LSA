@@ -49,6 +49,180 @@ sys
   ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/%E6%8E%A5%E7%B7%9A%E7%B4%B0%E7%AF%80%E5%9C%96/%E9%BA%B5%E5%8C%85%E7%89%88%E7%B4%B0%E7%AF%801.jpg)
   ![image](https://github.com/Liulun10/112-1-LSA-ALARAGE/blob/main/%E6%8E%A5%E7%B7%9A%E7%B4%B0%E7%AF%80%E5%9C%96/%E9%BA%B5%E5%8C%85%E7%89%88%E7%B4%B0%E7%AF%802.jpg)
   * 按照以上圖接線就能成功
+## code
+### 鬧鐘
+* 設定時間
+```
+def clock():
+     # 讓使用者輸入日期和時間
+    user_input_year = 2024 #int(input("請輸入年份: "))
+    user_input_month = 1 #int(input("請輸入月份: "))
+    user_input_day = 11 #int(input("請輸入日期: "))
+    user_input_hour = int(input("請輸入小時（24小時制）: "))
+    user_input_minute = int(input("請輸入分鐘: "))
+    user_input = int(input("請輸入秒數: "))
+
+    global user_alarm_time
+    # 使用者鬧鐘時間
+    user_alarm_time = datetime(user_input_year, user_input_month, user_input_day, user_input_hour, user_input_minute,user_input)
+
+    # 計算等待時間
+    time_until_alarm = user_alarm_time - datetime.now()
+
+    print(f"鬧鐘已設定在 {user_alarm_time.strftime('%Y-%m-%d %H:%M:%S')} 觸發")
+    target_time = user_alarm_time + timedelta(minutes=2)
+
+
+    # 等待使用者設定的時間
+    time.sleep(time_until_alarm.total_seconds())
+```
+* 撥放音樂
+```
+def play_mp3(file_path, volume=1.0, duration=alltime):
+    pygame.init()
+    pygame.mixer.init()
+
+    try:
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.set_volume(volume)
+
+        start_time = time.time()
+        while time.time() - start_time < duration and not stop_event.is_set():
+            pygame.mixer.music.play()
+
+            # 等待直到音樂播放完畢
+            while pygame.mixer.music.get_busy() and not stop_event.is_set():
+                time.sleep(1)
+    except Exception as e:
+        print("")
+        pygame.mixer.quit()
+        pygame.quit()
+    finally:
+        return
+```
+### 馬達轉動
+```
+def run_motor():
+    in1 = 13
+    in2 = 19
+    en = 26
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(in1, GPIO.OUT)
+    GPIO.setup(in2, GPIO.OUT)
+    GPIO.setup(en, GPIO.OUT)
+    GPIO.output(in1, GPIO.LOW)
+    GPIO.output(in2, GPIO.LOW)
+    p = GPIO.PWM(en, 100)
+    p.start(25)
+    time.sleep(halftime)
+    
+    # 運動時間
+    motor_run_time = halftime  # 假設運動時間為10秒
+    
+    start_time = time.time()
+    
+    while (time.time() - start_time) < motor_run_time and not stop_event.is_set():
+        GPIO.output(in1, GPIO.HIGH)
+        GPIO.output(in2, GPIO.LOW)
+        p.ChangeDutyCycle(100)
+        time.sleep(1)
+    
+    # 停止馬達
+    GPIO.output(in1, GPIO.LOW)
+    GPIO.output(in2, GPIO.LOW)
+    
+    # 停止PWM
+    p.stop()
+    
+    # 釋放GPIO資源
+    GPIO.cleanup()
+```
+#### 偵測心跳
+* 時間到即發送郵件
+```
+def heart():
+    p = Pulsesensor()
+    p.startAsyncBPM()
+
+    bpm_data = []
+
+    target_time = user_alarm_time + timedelta(minutes=1)
+    current_time = datetime.now()
+    global a
+    try:
+        while True:
+            while not stop_event.is_set():
+                bpm = p.BPM
+                if 0 < bpm < 150:
+                    print("BPM: %d" % bpm)
+                    bpm_data.append(bpm)
+                else:
+                    bpm_data.append(0)
+                time.sleep(1)
+
+                # 取最右邊的五個元素
+                last_five_elements = bpm_data[-5:]
+                average_value = sum(last_five_elements) / len(last_five_elements)
+
+                if len(bpm_data) > alltime:
+                    print("發送帥照喔！")
+                    play_mp3('photo.mp3',1.0,1)
+                    subprocess.run(["python3", "EMAAAAA.py"])
+                    a = 0
+                    return
+
+                if average_value > 50:
+                    print("謝謝，祝你有愉快的一天")
+                    play_mp3('happyday.mp3',1.0,1)
+                    a = average_value
+                    return
+    except KeyboardInterrupt:
+        print("Program terminated by user.")
+    finally:
+        p.stopAsyncBPM()
+```
+#### 發送電子郵件
+```
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
+
+smtp = smtplib.SMTP('smtp.gmail.com', 587)
+smtp.ehlo()
+smtp.starttls()
+smtp.login('mailfrom', 'password')
+#mailfrom請替換為寄信人信箱
+from_addr = 'mailfrom'
+#mailto請替換為收件人信箱
+to_addr = ["mailto","mailto2"]
+#主旨
+subject = '外流請查收(Demo無毒請安心食用)'
+#內文
+body = '請查收'
+
+# 創建 MIMEMultipart 物件
+msg = MIMEMultipart()
+msg['From'] = from_addr
+msg['To'] = ', '.join(to_addr)
+msg['Subject'] = subject
+
+# 在郵件內容中添加文字部分
+msg.attach(MIMEText(body, 'plain'))
+
+# 在郵件內容中添加附件（圖片）
+image_path = r'/home/pi/bigBT.png'#放檔案的路徑
+with open(image_path, 'rb') as image_file:
+    image_attachment = MIMEApplication(image_file.read(), Name='bt.png')
+    image_attachment['Content-Disposition'] = f'attachment; filename="{image_path}"'
+    msg.attach(image_attachment)
+
+# 發送郵件
+smtp.send_message(msg)
+
+print("郵件傳送成功!")
+smtp.quit()
+```
 ## 開始玩囉！ (Usage)
 * 購買以上設備，並組裝完成  
 * Clone the project on GitHub：`https://github.com/Liulun10/112-1-LSA-ALARAGE.git`
